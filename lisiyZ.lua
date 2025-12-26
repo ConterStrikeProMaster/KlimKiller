@@ -7,7 +7,7 @@ local TweenService = game:GetService("TweenService")
 -- Настройки
 local SETTINGS = {
     GAME_ID = 109983668079237,
-    PASTEFY_URL = "https://raw.githubusercontent.com/bobrbobr1337/main/refs/heads/main/servers.lua",
+    PASTEFY_URL = "https://raw.githubusercontent.com/ConterStrikeProMaster/KlimKiller/refs/heads/main/lisiyS.lua",
     COOLDOWN_TIME = 5 * 60,
     COUNTDOWN_TIME = 2,
     ERROR_RETRY_DELAY = 3,  -- 3 секунды при ошибке
