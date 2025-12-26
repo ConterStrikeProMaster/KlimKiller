@@ -18,7 +18,7 @@ local localPlayer = Players.LocalPlayer
 
 -- 🔒 VDS PASSWORD
 local VDS_PASSWORD = "F0QW3E4yh555"
-local VDS_URL = "http://95.81.99.228:3000"
+local VDS_URL = ""
 
 -- 🔐 KONVEER JOBID ENCRYPTION (только для VDS)
 local SECRET = "KONVEER_STRAWBERRYELEPHANT"
