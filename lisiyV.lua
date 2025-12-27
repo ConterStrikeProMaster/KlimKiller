@@ -55,7 +55,7 @@ end
 -- ⚙️ WEBHOOK SETTINGS BY INCOME RANGE
 local WEBHOOKS = {
 { -- 1M/s - 25M/s
-url = 'https://discord.com/api/webhooks/1454148280513593418/-5YY8N-J7t8H2FVaNekmSPvbBZwXOimsW6EgCXwvzecvtv8AnHGAjw-ki5qAv7f3H_v4',
+url = 'https://discord.com/api/webhooks/1454372752034365566/EmLdd5U_wxp6Ziy8gAAiGB7MHpeWPaDBZzS8vfAQSD2dWsB0ZyPAEfDYK0n869ObblnT',
 title = '🟢 Low Income (1-25M/s)',
 color = 0x00ff00,
 min = 1_000_000,
@@ -64,7 +64,7 @@ sendServerInfo = false,
 sendTeleport = true
 },
 { -- 26M/s - 100M/s (основной, без Server Info)
-url = 'https://discord.com/api/webhooks/1454148208048734251/TrNwdttDT5G_hOuPg1o3JdfGExZ8rSaN8qE7pBCbK953xqGHIJCxBWPMmb7L56jF7sNK',
+url = 'https://discord.com/api/webhooks/1454367328044060682/pNGrS2QtodZSTrZYUOfUA4PYACi8j9NlnJERUoxS05idfFJvA1ryd-d-VJAz5_Hue7am',
 title = '🟡 Medium Income (26-100M/s)',
 color = 0xffff00,
 min = 26_000_000,
@@ -74,7 +74,7 @@ sendTeleport = false,
 showJoinerAd = true
 },
 { -- 101M/s - 10000M/s (основной, без Server Info)
-url = 'https://discord.com/api/webhooks/1454148094659924153/4nsVdKrXznzSRMyLE1DNBvBPpJTFuHyr8bUpTYblrOZxd0vxpZw2XBT3NCYJSyP-kt6Q',
+url = 'https://discord.com/api/webhooks/1454365052856434709/pJywj0GG3K3XEqhmKZ2Hy3bC_ULOl1iaeZDYlfjXLhH4F-x1bWkb3wDdOZPIMoofSbzu',
 title = '🔴 High Income (101M+ /s)',
 color = 0xff0000,
 min = 101_000_000,
@@ -84,7 +84,7 @@ sendTeleport = false,
 showJoinerAd = true
 },
 { -- Special brainrots + overpay
-url = 'https://raw.githubusercontent.com/ConterStrikeProMaster/KlimKiller/refs/heads/main/lisiy1',
+url = 'https://discord.com/api/webhooks/1454116245099118752/dEVZDze8Jy_JELsJwIPbnnEcnl4zsLIqAPZMpimyohyTMdyUUW9lUClERk5foV_DlLGx',
 title = '⭐️ SPECIAL BRAINROTS',
 color = 0xff00ff,
 special = true,
@@ -533,58 +533,6 @@ local function getRequester()
     return http_request or request or (syn and syn.request) or (fluxus and fluxus.request) or (KRNL_HTTP and KRNL_HTTP.request)
 end
 
--- 🌐 ЗАГРУЗКА ВЕБХУКА ИЗ GITHUB (С ПОДДЕРЖКОЙ РАЗБИТЫХ СТРОК)
-local WEBHOOK_CACHE = {}
-
-local function LoadWebhookFromUrl(url)
-    -- Проверяем кэш
-    if WEBHOOK_CACHE[url] then
-        print("💾 Вебхук из кэша")
-        return WEBHOOK_CACHE[url]
-    end
-
-    -- Если это не GitHub URL, возвращаем как есть
-    if not url:match("^https://raw%.githubusercontent%.com") then
-        return url
-    end
-
-    local req = getRequester()
-    if not req then 
-        warn("⚠️ HTTP requester недоступен")
-        return nil
-    end
-
-    print("🔄 Загружаю вебхук с GitHub...")
-
-    local success, response = pcall(function()
-        return req({
-            Url = url,
-            Method = "GET",
-        })
-    end)
-
-    if success and response and response.StatusCode == 200 then
-        local content = response.Body
-
-        -- Убираем все переносы строк и лишние пробелы
-        local webhookUrl = content:gsub("\n", ""):gsub("\r", ""):gsub("%s+", "")
-
-        -- Очищаем от пробелов по краям
-        webhookUrl = webhookUrl:match("^%s*(.-)%s*$") or webhookUrl
-
-        print("✅ Вебхук загружен с GitHub")
-
-        -- Сохраняем в кэш
-        WEBHOOK_CACHE[url] = webhookUrl
-        return webhookUrl
-    else
-        warn("⚠️ Ошибка загрузки с GitHub")
-    end
-
-    return nil
-end
-
-
 -- 🔒 Кэш токена
 local VDS_TOKEN_CACHE = {
     token = nil,
@@ -785,7 +733,7 @@ local function sendDiscordNotificationByRange(filteredObjects, webhookConfig, al
 
     local ok, resp = pcall(function()
         return req({
-            Url = LoadWebhookFromUrl(webhookConfig.url) or webhookConfig.url,
+            Url = webhookConfig.url,
             Method = 'POST',
             Headers = { ['Content-Type'] = 'application/json' },
             Body = HttpService:JSONEncode(payload),
