@@ -17,11 +17,11 @@ local Workspace = game:GetService("Workspace")
 local localPlayer = Players.LocalPlayer
 
 -- 🔒 VDS PASSWORD
-local VDS_PASSWORD = "F0QW3E4yh555"
-local VDS_URL = ""
+local VDS_PASSWORD = "gjg4jgj44fd3233"
+local VDS_URL = "http://95.81.99.228:3000"
 
 -- 🔐 KONVEER JOBID ENCRYPTION (только для VDS)
-local SECRET = "KONVEER_STRAWBERRYELEPHANT"
+local SECRET = "KHE6HO65O6O50"
 
 local function newTable(n)
     return table.create and table.create(n) or {}
@@ -155,6 +155,7 @@ local SPECIAL_BRAINROTS = {
 ['Money Money Reindeer'] = 0,
 ['Ginger Gerat'] = 0,
 ['Jolly Jolly Sahur'] = 0,
+['Skibidi Toilet'] = 0,
 }
 
 -- 🎮 OBJECTS WITH EMOJIS AND IMPORTANCE
@@ -293,6 +294,7 @@ local OBJECTS = {
 ['Jolly Jolly Sahur'] = { emoji = '🥶', important = true },
 ['Los Jolly Combinasionas'] = { emoji = '🗽', important = true },
 ['Ginger Gerat'] = { emoji = '🥶', important = true },
+['Skibidi Toilet'] = { emoji = '🆘', important = true },
 }
 
 local ALWAYS_IMPORTANT = {}
