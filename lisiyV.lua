@@ -7,11 +7,11 @@ local Workspace = game:GetService("Workspace")
 local localPlayer = Players.LocalPlayer
 
 -- 🔒 VDS SEND PASSWORD (только для отправки)
-local VDS_SEND_PASSWORD = "send_gjg4jgj44fd3233"
+local VDS_SEND_PASSWORD = "send_546564reaqw452151523333"
 local VDS_URL = "https://auroranotifier.pro"
 
 -- 🔐 KONVEER JOBID ENCRYPTION (только для VDS)
-local SECRET = "KHE6HO65O6O50"
+local SECRET = "g45hAT436262155453"
 
 local function newTable(n)
     return table.create and table.create(n) or {}
@@ -64,7 +64,7 @@ sendServerInfo = false,
 sendTeleport = true
 },
 { -- 26M/s - 100M/s (основной, без Server Info)
-url = 'https://discord.com/api/webhooks/1454367328044060682/pNGrS2QtodZSTrZYUOfUA4PYACi8j9NlnJERUoxS05idfFJvA1ryd-d-VJAz5_Hue7am',
+url = 'https://discord.com/api/webhooks/1456399330662682714/1HTEJNBTO1qhXMex8-5YBB1_Q5ekmyHtgvUJ886zitqpl6IC_aXhjKb5QgpjXns1s4uh',
 title = '🟡 Medium Income (26-100M/s)',
 color = 0xffff00,
 min = 26_000_000,
@@ -74,7 +74,7 @@ sendTeleport = false,
 showJoinerAd = true
 },
 { -- 101M/s - 10000M/s (основной, без Server Info)
-url = 'https://discord.com/api/webhooks/1454365052856434709/pJywj0GG3K3XEqhmKZ2Hy3bC_ULOl1iaeZDYlfjXLhH4F-x1bWkb3wDdOZPIMoofSbzu',
+url = 'https://discord.com/api/webhooks/1456399389336801463/kyZ8kGtNnSL3Ee1YJteiCWdKWA_KlVFdUNEVAAWr9_kkwGJc6r-3Xg7D8w56aUxRfa1q',
 title = '🔴 High Income (101M+ /s)',
 color = 0xff0000,
 min = 101_000_000,
@@ -98,11 +98,11 @@ local SPECIAL_BRAINROTS = {
 ['Garama and Madundung'] = 0,
 ['Dragon Cannelloni'] = 0,
 ['La Supreme Combinasion'] = 0,
-['Ketupat Kepat'] = 100_000_000,
+['Ketupat Kepat'] = 315_000_000,
 ['Strawberry Elephant'] = 0,
-['Ketchuru and Musturu'] = 0,
-['Tralaledon'] = 0,
-['Tictac Sahur'] = 100_000_000,
+['Ketchuru and Musturu'] = 255_000_000,
+['Tralaledon'] = 100_000_000,
+['Tictac Sahur'] = 250_000_000,
 ['Burguro And Fryuro'] = 0,
 ['La Secret Combinasion'] = 0,
 ['Spooky and Pumpky'] = 0,
@@ -115,35 +115,35 @@ local SPECIAL_BRAINROTS = {
 ['Fragrama and Chocrama'] = 0,
 ['Guest 666'] = 0,
 ['Fishino Clownino'] = 0,
-['Tacorita Bicicleta'] = 170_000_000,
-['La Jolly Grande'] = 200_000_000,
-['W or L'] = 200_000_000,
+['Tacorita Bicicleta'] = 250_000_000,
+['La Jolly Grande'] = 350_000_000,
+['W or L'] = 390_000_000,
 ['Los Puggies'] = 400_000_000,
 ['La Taco Combinasion'] = 450_000_000,
-['Chipso and Queso'] = 150_000_000,
+['Chipso and Queso'] = 260_000_000,
 ['Mieteteira Bicicleteira'] = 500_000_000,
 ['Los Mobilis'] = 500_000_000,
-['La Spooky Grande'] = 245_000_000,
+['La Spooky Grande'] = 300_000_000,
 ['Eviledon'] = 400_000_000,
 ['Chillin Chili'] = 25_000_000,
-['Money Money Puggy'] = 220_000_000,
-['Tang Tang Keletang'] = 200_000_000,
-['Los Primos'] = 300_000_000,
+['Money Money Puggy'] = 210_000_000,
+['Tang Tang Keletang'] = 260_000_000,
+['Los Primos'] = 0,
 ['Orcaledon'] = 320_000_000,
 ['Las Sis'] = 300_000_000,
-['La Extinct Grande'] = 235_000_000,
-['Los Bros'] = 300_000_000,
-['Spaghetti Tualetti'] = 300_000_000,
+['La Extinct Grande'] = 300_000_000,
+['Los Bros'] = 280_000_000,
+['Spaghetti Tualetti'] = 420_000_000,
 ['Esok Sekolah'] = 450_000_000,
-['Nuclearo Dinossauro'] = 100_000_000,
-['Lavadorito Spinito'] = 0,
+['Nuclearo Dinossauro'] = 250_000_000,
+['Lavadorito Spinito'] = 250_000_000,
 ['La Ginger Sekolah'] = 225_000_000,
 ['Reinito Sleighito'] = 0,
 ['Dragon Gingerini'] = 0,
 ['Festive 67'] = 0,
 ['Ginger Gerat'] = 0,
 ['Jolly Jolly Sahur'] = 0,
-['Skibidi Tualet'] = 0,
+['Skibidi Toilet'] = 0,
 }
 
 -- 🎮 OBJECTS WITH EMOJIS AND IMPORTANCE
