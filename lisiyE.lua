@@ -547,6 +547,10 @@ local OBJECT_EMOJIS = {
     ['Jolly Jolly Sahur'] = '🥶',
     ['Ginger Gerat'] = '🥶',
     ['Skibidi Toilet'] = '🆘',
+    ['Cerberus'] = '👹',
+    ['Ay Mi Gatito'] = '😻',
+    ['AY MI GATITO MIAU MIAU'] = '😻',
+    ['Tuff Toucan'] = '🦜',
 }
 
 -- Список объектов, которые НЕ должны показываться в ESP (брейнроты и декорации)
