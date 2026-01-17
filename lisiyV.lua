@@ -148,6 +148,7 @@ local SPECIAL_BRAINROTS = {
     ['Cerberus'] = { min = 0, mutations = {} },
     ['Ay Mi Gatito'] = { min = 0, mutations = {} },
     ['AY MI GATITO MIAU MIAU'] = { min = 0, mutations = {} },
+    ['BRUNITO MARSITO'] = { min = 0, mutations = {} },
 }
 
 -- 🎮 OBJECTS WITH EMOJIS AND IMPORTANCE
@@ -293,7 +294,7 @@ local OBJECTS = {
     ['Giftini Spyderini'] = { emoji = '🕷', important = true },
     ['Cerberus'] = { emoji = '👹', important = true },
     ['Ay Mi Gatito'] = { emoji = '😻', important = true },
-    ['AY MI GATITO MIAU MIAU'] = { emoji = '😻', important = true },
+    ['BRUNITO MARSITO'] = { emoji = '🥸', important = true },
 }
 
 local ALWAYS_IMPORTANT = {}
